@@ -1,6 +1,10 @@
 {% set cronie = salt['grains.filter_by']({
-	  'Arch': {
+    'Arch': {
         'pkg': 'cronie',
         'service': 'cronie',
+    },
+    'default': {
+        'pkg': 'cron',
+        'service': 'cron',
     },
 }, grain="os_family", merge=salt['pillar.get']('cronie:lookup')) %}
