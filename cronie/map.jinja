@@ -1,9 +1,9 @@
 {% set cronie = salt['grains.filter_by']({
-	  'Arch': {
+    'Arch': {
         'pkg': 'cronie',
         'service': 'cronie',
     },
-    default: {
+    'default': {
         'pkg': 'cron',
         'service': 'cron',
     },
